@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [Header("Gameobject Reference")]
     [SerializeField] private GameObject mainPanel;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject pausePanel;
 
     [Header("Camera Reference")]
     [SerializeField] private CinemachineVirtualCamera topCamera;
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timer;
 
     private bool isGameOver;
+    private bool isPause;
 
     private void Awake() 
     {
@@ -41,7 +43,13 @@ public class GameManager : MonoBehaviour
 
     private void Update() 
     {
-        if(isGameOver) return;
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(isPause) ResumeGame();
+            else PauseGame();
+        }
+
+        if(isGameOver || isPause) return;
 
         UpdateTimer();
     }
@@ -79,12 +87,38 @@ public class GameManager : MonoBehaviour
         GameOverPanel();
     }
 
+    public void PauseGame()
+    {
+        pausePanel.SetActive(true);
+        mainPanel.SetActive(false);
+        gameOverPanel.SetActive(false);
+
+        isGameOver = false;
+        isPause = true;
+
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        pausePanel.SetActive(false);
+        mainPanel.SetActive(true);
+        gameOverPanel.SetActive(false);
+
+        isGameOver = false;
+        isPause = false;
+
+        Time.timeScale = 1;
+    }
+
     private void GameOverPanel()
     {
         gameOverPanel.SetActive(true);
+        pausePanel.SetActive(false);
         mainPanel.SetActive(false);
 
         isGameOver = true;
+        isPause = false;
     }
 
     public bool IsGameOver()
