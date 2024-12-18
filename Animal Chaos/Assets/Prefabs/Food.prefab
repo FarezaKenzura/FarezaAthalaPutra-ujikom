@@ -181,3 +181,4 @@ MonoBehaviour:
   speed: 300
   lifeTime: 3
   score: 1
+  eatClip: {fileID: 8300000, guid: aebae0e89d575dc43ae340319487ef87, type: 3}

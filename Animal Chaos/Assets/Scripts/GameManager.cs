@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -52,6 +53,11 @@ public class GameManager : MonoBehaviour
         finalScoreText.text = "Final Score: " + this.score;
     }
 
+    public void ReduceScore(int score)
+    {
+        this.score = Mathf.Max(0, this.score - score);
+    }
+
     private void UpdateTimer()
     {
         if(timer > 0)
@@ -79,5 +85,10 @@ public class GameManager : MonoBehaviour
         mainPanel.SetActive(false);
 
         isGameOver = true;
+    }
+
+    public bool IsGameOver()
+    {
+        return isGameOver;
     }
 }

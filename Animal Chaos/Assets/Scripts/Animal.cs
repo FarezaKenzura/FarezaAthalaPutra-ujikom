@@ -6,8 +6,10 @@ public class Animal : MonoBehaviour
 {
     [Header("Animal Properties")]
     [SerializeField] private float speed;
-    [SerializeField] private int score = 1;
+    [SerializeField] private int score = 3;
     [SerializeField] private float lifeTime = 10.0f;
+    [SerializeField] private AudioClip destroyAnimalClip;
+    [SerializeField] private ParticleSystem deathParticle;
 
     private Rigidbody rb;
     private float lifeTimer;
@@ -22,6 +24,12 @@ public class Animal : MonoBehaviour
         lifeTimer += Time.deltaTime;
         if(lifeTimer >= lifeTime)
         {
+            GameManager.Instance.ReduceScore(score);
+
+            Vector3 spawnPosition = transform.position + transform.up;
+            Instantiate(deathParticle, spawnPosition, deathParticle.transform.rotation);
+
+            AudioSource.PlayClipAtPoint(destroyAnimalClip, Vector3.zero);
             Destroy(gameObject);
         }
     }
@@ -40,5 +48,10 @@ public class Animal : MonoBehaviour
     public void DestroyThis()
     {
         Destroy(gameObject);
+
+        Vector3 spawnPosition = transform.position + transform.up;
+        Instantiate(deathParticle, spawnPosition, deathParticle.transform.rotation);
+
+        AudioSource.PlayClipAtPoint(destroyAnimalClip, Vector3.zero);
     }
 }

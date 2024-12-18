@@ -8,6 +8,7 @@ public class Food : MonoBehaviour
     [SerializeField] private float speed = 300.0f;
     [SerializeField] private float lifeTime = 3f;
     [SerializeField] private int score = 1;
+    [SerializeField] private AudioClip eatClip;
 
     private Rigidbody rb;
 
@@ -35,6 +36,9 @@ public class Food : MonoBehaviour
         {
             Animal animal = other.GetComponent<Animal>();
             GameManager.Instance.AddScore(score);
+
+            AudioSource.PlayClipAtPoint(eatClip, Vector3.zero);
+            
             animal.DestroyThis();
             Destroy(gameObject);
         }    

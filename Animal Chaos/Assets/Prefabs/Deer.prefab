@@ -1035,6 +1035,7 @@ GameObject:
   - component: {fileID: 7316840605309458775}
   - component: {fileID: 978883688857738696}
   - component: {fileID: 7054126185918460570}
+  - component: {fileID: 3165140643971711386}
   m_Layer: 0
   m_Name: Deer
   m_TagString: Animal
@@ -1119,8 +1120,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 250
-  score: 1
-  lifeTimer: 10
+  score: 3
+  lifeTime: 10
+  destroyAnimalClip: {fileID: 8300000, guid: 0c008ee3ee72a4362a35be25fa5de043, type: 3}
+  deathParticle: {fileID: 8904345243012700189, guid: 3c5ee5933ab6f6d4fac34696d10be779, type: 3}
+--- !u!95 &3165140643971711386
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4919440882858296086}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f336f9ae672c8b343a825e2dfbc4767c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5105322227491581405
 GameObject:
   m_ObjectHideFlags: 0

@@ -1903,6 +1903,7 @@ GameObject:
   - component: {fileID: 2970446642430513912}
   - component: {fileID: 1215292014210082119}
   - component: {fileID: 6467410588033364126}
+  - component: {fileID: -3173418683855202806}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Animal
@@ -1987,8 +1988,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 300
-  score: 1
-  lifeTimer: 10
+  score: 3
+  lifeTime: 10
+  destroyAnimalClip: {fileID: 8300000, guid: 0c008ee3ee72a4362a35be25fa5de043, type: 3}
+  deathParticle: {fileID: 8904345243012700189, guid: 3c5ee5933ab6f6d4fac34696d10be779, type: 3}
+--- !u!95 &-3173418683855202806
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171433524145119862}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 422f3c6ad5e753c42881d8152f4425f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8328025987055168851
 GameObject:
   m_ObjectHideFlags: 0

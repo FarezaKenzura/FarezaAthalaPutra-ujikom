@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 7729458623294852680}
   - component: {fileID: 3323946699154634215}
   - component: {fileID: 2348429836720092586}
+  - component: {fileID: 8003940880287375833}
   m_Layer: 0
   m_Name: Boy
   m_TagString: Untagged
@@ -325,6 +326,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 350
   foodPrefabs: {fileID: 6930484532784976347, guid: e0a0c29bee7f02641955b733cc73da90, type: 3}
+  throwClip: {fileID: 8300000, guid: c6600c5491e54a044b5fa6d406a6e20b, type: 3}
+--- !u!95 &8003940880287375833
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144604289532474289}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a0ff06c52d7501349b4a17c52af20d3f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1220890304372386556
 GameObject:
   m_ObjectHideFlags: 0
