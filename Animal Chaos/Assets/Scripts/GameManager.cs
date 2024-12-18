@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(int score)
     {
         this.score += score;
+        scoreText.text = "Score: " + this.score;
     }
 
     private void UpdateTimer()
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         if(timer > 0)
         {
             timer -= Time.deltaTime;
+            timeText.text = "Timer: " + ((int)timer);
         }
     }
 }
