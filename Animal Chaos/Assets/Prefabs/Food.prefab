@@ -180,3 +180,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 300
   lifeTime: 3
+  score: 1

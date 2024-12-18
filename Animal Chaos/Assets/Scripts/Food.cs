@@ -7,6 +7,7 @@ public class Food : MonoBehaviour
     [Header("Food Properties")]
     [SerializeField] private float speed = 300.0f;
     [SerializeField] private float lifeTime = 3f;
+    [SerializeField] private int score = 1;
 
     private Rigidbody rb;
 
@@ -33,6 +34,7 @@ public class Food : MonoBehaviour
         if(other.CompareTag("Animal"))
         {
             Animal animal = other.GetComponent<Animal>();
+            GameManager.Instance.AddScore(score);
             animal.DestroyThis();
             Destroy(gameObject);
         }    
