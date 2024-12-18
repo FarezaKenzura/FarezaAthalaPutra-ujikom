@@ -33,7 +33,7 @@ public class Spawner : MonoBehaviour
     {
         Animal animal = animals[Random.Range(0, animals.Count)];
         Vector3 spawnPosition = spawnPlace.position + new Vector3(Random.Range(-rangeHorizontal, rangeHorizontal), 0, 0);
-        Instantiate(animal, spawnPosition, animal.transform.rotation);
+        Instantiate(animal, spawnPosition, animal.transform.rotation, spawnPlace);
     }
 
     private void OnDrawGizmos() 

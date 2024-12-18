@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 300
   score: 3
-  lifeTime: 10
+  lifeTime: 5
   destroyAnimalClip: {fileID: 8300000, guid: 0c008ee3ee72a4362a35be25fa5de043, type: 3}
   deathParticle: {fileID: 8904345243012700189, guid: 3c5ee5933ab6f6d4fac34696d10be779, type: 3}
 --- !u!95 &-3173418683855202806
